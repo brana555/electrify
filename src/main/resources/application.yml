@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Electrify
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+  info:
+    title: Electrify
+    description: Electrify
+    version: 1.0.0

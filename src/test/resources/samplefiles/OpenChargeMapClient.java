@@ -1,4 +1,4 @@
-package com.project.electrify.client;
+package samplefiles;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
