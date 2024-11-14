@@ -11,3 +11,5 @@ springdoc:
     title: Electrify
     description: Electrify
     version: 1.0.0
+
+chargeMapKey: b68d6b86-ae22-452b-a116-d4007dc44481
