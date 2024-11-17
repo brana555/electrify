@@ -1,6 +1,14 @@
 spring:
   application:
     name: Electrify
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: electrify
+
+#Use it when you want to see all the query logs
+#logging.level.org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+#logging.level.org.mongodb.driver: DEBUG
 
 springdoc:
   api-docs:
