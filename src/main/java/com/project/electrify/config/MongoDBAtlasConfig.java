@@ -8,9 +8,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.data.mongodb.core.MongoTemplate;
 
-@Profile("local")
+@Profile("mongoDBAtlas")
 @Configuration
-public class MongoDBLocalConfig {
+public class MongoDBAtlasConfig {
     @Value("${spring.data.mongodb.uri}")
     private String mongoDbUri;
 
@@ -26,13 +26,5 @@ public class MongoDBLocalConfig {
     public MongoTemplate mongoTemplate() {
         return new MongoTemplate(mongoClient(), databaseName);
     }
-/*    public static void main(String[] args) {
-        String uri = "mongodb://localhost:27017"; // Change as needed
-        try (MongoClient mongoClient = MongoClients.create(uri)) {
-            MongoDatabase database = mongoClient.getDatabase("electrify");
-            System.out.println("Connected to MongoDB database: " + database.getName());
-        } catch (Exception e) {
-            System.err.println("An error occurred: " + e.getMessage());
-        }
-    }*/
+
 }
