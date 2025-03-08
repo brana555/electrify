@@ -1,110 +1,118 @@
 package com.project.electrify.model;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 @Data
-@Document(collection = "rawOpenChargeMapApiResponses")
-public class RawOpenChargeMapApiResponse {
-
+@ToString
+@Document(collection = "city")
+public class City {
     @Id
     private String id;
+    private String city;
+    private double longitude;
+    private double latitude;
+    private String auditCreateTs;
+    private List<RawOpenChargeMapApiResponse> rawOpenChargeMapApiResponses;
 
-    @Field("DataProvider")
-    private DataProvider dataProvider;
+    @Data
+    public static class RawOpenChargeMapApiResponse {
+        @Field("DataProvider")
+        private DataProvider dataProvider;
 
-    @Field("OperatorInfo")
-    private OperatorInfo operatorInfo;
+        @Field("OperatorInfo")
+        private OperatorInfo operatorInfo;
 
-    @Field("UsageType")
-    private UsageType usageType;
+        @Field("UsageType")
+        private UsageType usageType;
 
-    @Field("StatusType")
-    private StatusType statusType;
+        @Field("StatusType")
+        private StatusType statusType;
 
-    @Field("SubmissionStatus")
-    private SubmissionStatus submissionStatus;
+        @Field("SubmissionStatus")
+        private SubmissionStatus submissionStatus;
 
-    @Field("UserComments")
-    private String userComments;
+        @Field("UserComments")
+        private String userComments;
 
-    @Field("PercentageSimilarity")
-    private Double percentageSimilarity;
+        @Field("PercentageSimilarity")
+        private Double percentageSimilarity;
 
-    @Field("MediaItems")
-    private List<String> mediaItems;
+        @Field("MediaItems")
+        private List<String> mediaItems;
 
-    @Field("IsRecentlyVerified")
-    private Boolean isRecentlyVerified;
+        @Field("IsRecentlyVerified")
+        private Boolean isRecentlyVerified;
 
-    @Field("DateLastVerified")
-    private String dateLastVerified;
+        @Field("DateLastVerified")
+        private String dateLastVerified;
 
-    @Field("UUID")
-    private String uuid;
+        @Field("UUID")
+        private String uuid;
 
-    @Field("ParentChargePointID")
-    private String parentChargePointID;
+        @Field("ParentChargePointID")
+        private String parentChargePointID;
 
-    @Field("DataProviderID")
-    private Integer dataProviderID;
+        @Field("DataProviderID")
+        private Integer dataProviderID;
 
-    @Field("DataProvidersReference")
-    private String dataProvidersReference;
+        @Field("DataProvidersReference")
+        private String dataProvidersReference;
 
-    @Field("OperatorID")
-    private Integer operatorID;
+        @Field("OperatorID")
+        private Integer operatorID;
 
-    @Field("OperatorsReference")
-    private String operatorsReference;
+        @Field("OperatorsReference")
+        private String operatorsReference;
 
-    @Field("UsageTypeID")
-    private Integer usageTypeID;
+        @Field("UsageTypeID")
+        private Integer usageTypeID;
 
-    @Field("UsageCost")
-    private String usageCost;
+        @Field("UsageCost")
+        private String usageCost;
 
-    @Field("AddressInfo")
-    private AddressInfo addressInfo;
+        @Field("AddressInfo")
+        private AddressInfo addressInfo;
 
-    @Field("Connections")
-    private List<Connection> connections;
+        @Field("Connections")
+        private List<Connection> connections;
 
-    @Field("NumberOfPoints")
-    private Integer numberOfPoints;
+        @Field("NumberOfPoints")
+        private Integer numberOfPoints;
 
-    @Field("GeneralComments")
-    private String generalComments;
+        @Field("GeneralComments")
+        private String generalComments;
 
-    @Field("DatePlanned")
-    private String datePlanned;
+        @Field("DatePlanned")
+        private String datePlanned;
 
-    @Field("DateLastConfirmed")
-    private String dateLastConfirmed;
+        @Field("DateLastConfirmed")
+        private String dateLastConfirmed;
 
-    @Field("StatusTypeID")
-    private Integer statusTypeID;
+        @Field("StatusTypeID")
+        private Integer statusTypeID;
 
-    @Field("DateLastStatusUpdate")
-    private String dateLastStatusUpdate;
+        @Field("DateLastStatusUpdate")
+        private String dateLastStatusUpdate;
 
-    @Field("MetadataValues")
-    private List<String> metadataValues;
+        @Field("MetadataValues")
+        private List<String> metadataValues;
 
-    @Field("DataQualityLevel")
-    private Integer dataQualityLevel;
+        @Field("DataQualityLevel")
+        private Integer dataQualityLevel;
 
-    @Field("DateCreated")
-    private String dateCreated;
+        @Field("DateCreated")
+        private String dateCreated;
 
-    @Field("SubmissionStatusTypeID")
-    private Integer submissionStatusTypeID;
+        @Field("SubmissionStatusTypeID")
+        private Integer submissionStatusTypeID;
+    }
 
     @Data
     public static class DataProvider {

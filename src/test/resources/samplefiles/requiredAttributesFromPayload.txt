@@ -1,0 +1,39 @@
+OperatorInfo
+Title = BP Pulse (UK)
+IsPrivateIndividual = false
+WebsiteURL = https://www.bppulse.co.uk/
+PhonePrimaryContact = 01582 400331
+DateLastStatusUpdate
+DateCreated
+AddressInfo
+Title = Hillingdon Fire Station
+Address 1 =
+Address 2 =
+Town =
+State =
+Postcode =
+Latitude =
+Longitude =
+
+Connections = array
+1
+Connection Type
+Title = CSS (Type 2)
+StatusType
+IsOperational = true
+Level
+Title = Level 3: High (Over 40KW)
+CurrentType
+Title = DC
+Description = Direct Current
+2
+Connection Type
+Title = CHAdeMO
+StatusType
+IsOperational = true
+Level
+Title = Level 3: High (Over 40KW)
+CurrentType
+Title = DC
+Description = Direct Current
+
